@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.notes-container{
+    display: flex;
+    height: 100vh;
+}
+.note-creation-sidebar{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #F4F6F9;
+    height: 100vh;
+    gap: 50px;
+    background: url(/public/Sprinkle.svg);
+    background-size: cover;
+    background-position:left;
+    background-repeat: no-repeat;
+}
+.note-creation{
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.note-creation input{
+    width: 350px;
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 1rem;
+    box-shadow: .3rem .3rem #303651;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+input:focus{
+    outline: none;
+}
+textarea{
+    width: 350px;
+    padding: 10px;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    box-shadow: .3rem .3rem #303651;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+textarea:focus{
+    outline: none;
+}
+#add-btn{
+    padding: 10px;
+    background: black;
+    color: white;
+    width: 150px;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.11rem;
+    transition: box-shadow 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#add-btn:active{
+    box-shadow: .5rem .5rem #303651;
+}
+#Text{
+    display: none;
+}
+/* notes holder */
+.notes-adder-container{
+    width: 70%;
+}
+.notes-holder{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    align-items: center;
+    margin: 20px;
+    gap: 50px;
+}
+.notes-holder div{
+    width: auto;
+    height: auto;
+    border: 2px solid #303651;
+    padding: 20px;
+    border-radius: 5px;
+    animation: addUp .2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+    box-shadow: .2rem .6rem black;
+}
+.notes-holder div h2{
+    font-size: 1.2rem;
+}
+.notes-holder button{
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    position: relative;
+    top: 10px;
+}
+/* key frames */
+@keyframes addUp {
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* media queries */
+@media screen and (max-width: 578px) {
+    .notes-container{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .note-creation-sidebar{
+        width: auto;
+        background: none;
+        height: 100vh;
+        gap: 30px;
+    }
+    .note-creation {
+        gap: 20px;
+    }
+    .note-creation input,textarea{
+        width: 300px;
+        padding: 10px;
+    }
+    .notes-adder-container{
+        width: auto;
+    }
+    .notes-holder{
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        position: absolute;
+        top: 670px;
+        padding: 10px;
+        gap: 40px;
+    }
+    .notes-holder div{
+        width:auto;
+        box-shadow: none;
+
+    }
+    #add-btn{
+        width: 100px;
+    }
+    #Text{
+        text-align: center;
+        display: block;
+        font-weight: 800;
+        position: absolute;
+        top: 580px;
+        left: 30px;
+        font-size: 1rem;
+        font-weight: 800;
+        background: #F4F6F9;
+        padding: 13px;
+        margin: 20px;
+    }
+}
