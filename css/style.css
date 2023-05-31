@@ -57,7 +57,7 @@ textarea:focus{
 }
 #add-btn{
     padding: 10px;
-    background: black;
+    background: #9d75eb;
     color: white;
     width: 150px;
     font-family: 'Nunito Sans', sans-serif;
@@ -93,7 +93,7 @@ textarea:focus{
     box-shadow: .2rem .6rem black;
 }
 .notes-holder div h2{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .notes-holder button{
     background: none;
@@ -101,6 +101,7 @@ textarea:focus{
     font-size: 1.2rem;
     position: relative;
     top: 10px;
+    color:#9d75eb;
 }
 /* key frames */
 @keyframes addUp {
@@ -128,7 +129,7 @@ textarea:focus{
         gap: 20px;
     }
     .note-creation input,textarea{
-        width: 300px;
+        width: 320px;
         padding: 10px;
     }
     .notes-adder-container{
@@ -144,8 +145,7 @@ textarea:focus{
     }
     .notes-holder div{
         width:auto;
-        box-shadow: none;
-
+        box-shadow: .3rem .3rem black;
     }
     #add-btn{
         width: 100px;
@@ -156,11 +156,15 @@ textarea:focus{
         font-weight: 800;
         position: absolute;
         top: 580px;
-        left: 40px;
+        left: 60px;
         font-size: 1rem;
         font-weight: 800;
         background: #F4F6F9;
-        padding: 13px;
+        padding: 12px;
         margin: 20px;
+    }
+    .notes-holder button{
+        font-size: 1.45rem;
+        color: #9d75eb;
     }
 }

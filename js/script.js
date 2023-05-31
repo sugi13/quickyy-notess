@@ -54,12 +54,16 @@ function CreateNote(){
      NotesBox = document.createElement('div');
      let ButtonBox = document.createElement('div');
      let removeBox = document.createElement('button');
+     let copyContent = document.createElement('button');
 
     titleText.innerHTML = newNote.title;
     noteText.innerHTML = newNote.note;
     removeBox.innerHTML = `<i class="ai-trash-can"></i>`;
+    copyContent.innerHTML = `<i class="ai-copy"></i>`
     removeBox.setAttribute('onclick', 'removeNote(event)');
     ButtonBox.appendChild(removeBox);
+    ButtonBox.appendChild(copyContent);
+
 
     NotesBox.appendChild(titleText);
     NotesBox.appendChild(noteText);
